@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/DSC/Downloads/Project Management/ApiProjectManagement/DataBase/BD_Project.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="browser pragmas query structure" current="0"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1387"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,13:mainTBL_PROYECTOS"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="TBL_MUNICIPIOS" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="88"/><column index="2" value="124"/><column index="3" value="73"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="TBL_PROYECTOS" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="88"/><column index="2" value="695"/><column index="3" value="109"/><column index="4" value="72"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="TBL_PROYECTOS_MUNICIPIOS" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="89"/><column index="2" value="88"/><column index="3" value="88"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="TBL_REGION" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort><column index="2" mode="0"/></sort><column_widths><column index="1" value="73"/><column index="2" value="109"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="TBL_SECTOR" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="72"/><column index="2" value="271"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="sqlite_sequence" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="43"/><column index="2" value="40"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">Insert into TBL_SECTOR (Nombre_Sector) values(&quot;Cultura&quot;);
+Insert into TBL_SECTOR (Nombre_Sector) values(&quot;Defensa&quot;);
+Insert into TBL_SECTOR (Nombre_Sector) values(&quot;Educación&quot;);
+Insert into TBL_SECTOR (Nombre_Sector) values(&quot;Salud Y Protección Social&quot;);
+Insert into TBL_SECTOR (Nombre_Sector) values(&quot;Deporte Y Recreación&quot;);
+
+Insert into TBL_REGION (Nombre_Region) values(&quot;Amazonas&quot;);
+Insert into TBL_REGION (Nombre_Region) values(&quot;Arauca&quot;);
+Insert into TBL_REGION (Nombre_Region) values(&quot;Cauca&quot;);
+Insert into TBL_REGION (Nombre_Region) values(&quot;Nariño&quot;);
+Insert into TBL_REGION (Nombre_Region) values(&quot;Valle del Cauca&quot;);
+
+Insert into TBL_MUNICIPIOS (Nombre_Municipio, Id_Region) values(&quot;Leticia&quot;, 1);
+Insert into TBL_MUNICIPIOS (Nombre_Municipio, Id_Region) values(&quot;Puerto Nariño&quot;, 1);
+Insert into TBL_MUNICIPIOS (Nombre_Municipio, Id_Region) values(&quot;Puerto Nariño&quot;, 1);
+Insert into TBL_MUNICIPIOS (Nombre_Municipio, Id_Region) values(&quot;Arauquita&quot;, 2);
+Insert into TBL_MUNICIPIOS (Nombre_Municipio, Id_Region) values(&quot;Cravo Norte&quot;, 2);
+Insert into TBL_MUNICIPIOS (Nombre_Municipio, Id_Region) values(&quot;Fortul&quot;, 2);
+Insert into TBL_MUNICIPIOS (Nombre_Municipio, Id_Region) values(&quot;Saravena&quot;, 2);
+Insert into TBL_MUNICIPIOS (Nombre_Municipio, Id_Region) values(&quot;Buenos Aires&quot;, 3);
+Insert into TBL_MUNICIPIOS (Nombre_Municipio, Id_Region) values(&quot;Caloto&quot;, 3);
+Insert into TBL_MUNICIPIOS (Nombre_Municipio, Id_Region) values(&quot;Santander de Quilichao&quot;, 3);
+Insert into TBL_MUNICIPIOS (Nombre_Municipio, Id_Region) values(&quot;Popayán&quot;, 3);
+Insert into TBL_MUNICIPIOS (Nombre_Municipio, Id_Region) values(&quot;Florencia&quot;, 3);
+Insert into TBL_MUNICIPIOS (Nombre_Municipio, Id_Region) values(&quot;Piamonte&quot;, 3);
+Insert into TBL_MUNICIPIOS (Nombre_Municipio, Id_Region) values(&quot;Mercaderes&quot;, 3);
+Insert into TBL_MUNICIPIOS (Nombre_Municipio, Id_Region) values(&quot;Barbacoas&quot;, 4);
+Insert into TBL_MUNICIPIOS (Nombre_Municipio, Id_Region) values(&quot;Belén&quot;, 4);
+Insert into TBL_MUNICIPIOS (Nombre_Municipio, Id_Region) values(&quot;La Unión&quot;, 4);
+Insert into TBL_MUNICIPIOS (Nombre_Municipio, Id_Region) values(&quot;San Pablo&quot;, 4);
+Insert into TBL_MUNICIPIOS (Nombre_Municipio, Id_Region) values(&quot;El Tambo&quot;, 4);
+Insert into TBL_MUNICIPIOS (Nombre_Municipio, Id_Region) values(&quot;Taminango&quot;, 4);
+Insert into TBL_MUNICIPIOS (Nombre_Municipio, Id_Region) values(&quot;Cali&quot;, 5);
+Insert into TBL_MUNICIPIOS (Nombre_Municipio, Id_Region) values(&quot;Cartago&quot;, 5);
+Insert into TBL_MUNICIPIOS (Nombre_Municipio, Id_Region) values(&quot;Jamundí&quot;, 5);
+Insert into TBL_MUNICIPIOS (Nombre_Municipio, Id_Region) values(&quot;Yumbo&quot;, 5);
+Insert into TBL_PROYECTOS (Nombre_Proyecto, Valor_Proyecto, Id_Sector) values(&quot;Estudios y diseños para la construcción de un centro de acopio y plaza de mercado en el municipio de onzaga santander&quot;, 59500000, 1);
+Insert into TBL_PROYECTOS (Nombre_Proyecto, Valor_Proyecto, Id_Sector) values(&quot;Fortalecimiento de la producción ganadera mediante repoblamiento y mejoramiento genético a pequeños y medianos productores en el municipio de mercaderes&quot;, 1999432800, 1);</sql><current_tab id="0"/></tab_sql></sqlb_project>

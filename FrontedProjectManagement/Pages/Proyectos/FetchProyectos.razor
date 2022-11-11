@@ -1,0 +1,67 @@
+﻿@page "/proyectos/fetchproyectos"
+
+@using FrontedProjectManagement.Models
+@using FrontedProjectManagement.Services
+
+@inject NavigationManager Navigation
+@inject IProyectosService _proyectosService
+
+<div class="container-fluid">
+
+    <div class="row ">
+        <h3>ProjectApp - Listado de proyectos</h3>
+        <button type="button" class="btn btn-sm btn-success" @onclick='() => Navigation.NavigateTo("proyectos/create")'><i class="fas fa-plus pr-2"></i> Nuevo Proyecto</button>
+    </div>    
+
+    <div class="row" >
+        <table class="table table-striped table-hover ">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre proyecto</th>
+                    <th>Valor proyecto</th>
+                    <th>Sector</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (!tools.Any())
+                {
+                    <tr>
+                        <button class="btn btn-primary" type="button" disabled>
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            <span class="visually-hidden">Loading...</span>
+                        </button>
+                    </tr>
+                }
+                else
+                {
+                    @foreach (var tool in tools)
+                    {
+                        <tr @onclick="()=> RedirectTo(tool.Id_Proyecto)" class="cursor-pointer">
+                            <td>@tool.Id_Proyecto</td>
+                            <td>@tool.Nombre_Proyecto</td>
+                            <td>@tool.Valor_Proyecto</td>
+                            <td>@tool.Id_Sector</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@code {
+    private List<Proyectos> tools = new List<Proyectos>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        tools = await _proyectosService.GetProyectos();
+    }
+
+    private void RedirectTo(int toolId)
+    {
+        Navigation.NavigateTo($"/proyectos/{toolId}");
+    }
+    
+}

@@ -1,0 +1,21 @@
+CREATE TABLE TBL_SECTOR (Id_Sector INTEGER PRIMARY KEY,
+						 Nombre_Sector TEXT NOT NULL
+						 );
+						 
+CREATE TABLE TBL_REGION (Id_Region INTEGER PRIMARY KEY,
+						 Nombre_Region TEXT NOT NULL);
+						 
+CREATE TABLE TBL_PROYECTOS  (Id_Proyecto INTEGER PRIMARY KEY,
+							 Nombre_Proyecto TEXT NOT NULL,
+							 Valor_Proyecto REAL NULL,
+							 Id_Sector INTEGER REFERENCES TBL_SECTOR(Id_Sector));
+
+
+CREATE TABLE TBL_MUNICIPIOS (Id_Municipio INTEGER PRIMARY KEY,
+							 Nombre_Municipio TEXT NOT NULL,
+							 Id_Region INTEGER REFERENCES TBL_REGION (Id_Region));
+							 
+CREATE TABLE TBL_PROYECTOS_MUNICIPIOS (Id_ProyMuni INTEGER PRIMARY KEY AUTOINCREMENT,
+									   Id_Proyecto INTEGER REFERENCES TBL_PROYECTOS (Id_Proyecto),
+									   Id_Municipio INTEGER REFERENCES TBL_MUNICIPIOS (Id_Municipio));
+							 

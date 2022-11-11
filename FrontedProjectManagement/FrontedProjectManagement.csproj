@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Blazored.Toast" Version="3.2.2"/>
+    <PackageReference Include="Blazored.Modal" Version="7.1.0"/>
+    <PackageReference Include="System.Net.Http.Json" Version="7.0.0"/>
+  </ItemGroup>
+</Project>
